@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../features/home/home_page.dart';
 import '../features/modes/modes.dart';
 import '../features/profile/profile_page.dart';
+import '../features/game/guess_from_career.dart';
 
 class AppRouter {
   static final router = GoRouter(
@@ -28,6 +29,11 @@ class AppRouter {
             path: '/profile',
             pageBuilder: (context, state) =>
                 const NoTransitionPage(child: ProfilePage()),
+          ),
+          GoRoute(
+            path: '/game/career-player',
+            pageBuilder: (context, state) =>
+                const MaterialPage(child: PlayerFromCareerGamePage()),
           ),
         ],
       ),

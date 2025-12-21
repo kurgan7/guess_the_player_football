@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
 
 class ExplorePage extends StatelessWidget {
   const ExplorePage({super.key});
@@ -62,7 +64,7 @@ class ExplorePage extends StatelessWidget {
               badgeBottom: 'AD 1/1',
               freeRemaining: 1,
               adRemaining: 1,
-              onStart: () {},
+              onStart: () => context.go('/game/career-player'),
               onWatchAd: () {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Reklam akışı (MVP stub)')),
